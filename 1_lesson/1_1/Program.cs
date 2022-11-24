@@ -8,3 +8,7 @@ if(num2 == num1*num1)
 {
     Console.WriteLine("да");
 }
+else
+{
+    Console.WriteLine("нет");
+}
