@@ -1,7 +1,11 @@
 ﻿// Напишите программу, которая выводит третью цифру
 // заданного числа или сообщает, что третьей цифры нет
 
-string ThreeNum(int num)
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+Console.WriteLine(ThirdDigit(number));
+
+string ThirdDigit(int num)
 {
         if (num > 99)
     {
@@ -12,8 +16,6 @@ string ThreeNum(int num)
         return $"{num % 10} ";
     }
     else
-        return "Третьего числа нет";
+        return "Данное число меньше трехзначного, третья цифра в нем отсутствует";
 }
-Console.WriteLine("Введите число: ");
-int number = int.Parse(Console.ReadLine());
-Console.WriteLine(ThreeNum(number));
+
