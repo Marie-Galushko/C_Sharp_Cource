@@ -6,7 +6,7 @@
 Console.Clear();
 Console.Write("Введите число: ");
 double n = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine((1 + n) / 2 * n);
+Console.WriteLine((1 + n) / 2 * n); // формула арифметической прогрессии
 
 
 // Вариант 2
