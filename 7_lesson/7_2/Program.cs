@@ -14,15 +14,15 @@ void InputMatrix(int[, ] matrix)
     }
 }
 
-void ReleaseMatrix(int[, ] matrix)
+void ReleaseMatrix(int[, ] matrix) // принимает матрицу
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (i % 2 == 1 && j % 2 == 1)
+            if (i % 2 == 1 && j % 2 == 1) // нечетные, делятся на 2 с остатком
             {
-                matrix[i, j] *= matrix[i, j];
+                matrix[i, j] *= matrix[i, j]; // то этот элемент матрицы умножается сам на себя
             }
             Console.Write($"{matrix[i, j]} \t");
         }
@@ -37,4 +37,4 @@ int[,] matrix = new int[coord[0], coord[1]];
 Console.WriteLine("Начальная матрица: ");
 InputMatrix(matrix);
 Console.WriteLine("Результат: ");
-ReleaseMatrix(matrix);
+ReleaseMatrix(matrix); // вызываем функцию итогового решения
