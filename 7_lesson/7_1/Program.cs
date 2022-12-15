@@ -18,5 +18,8 @@ void InputMatrix(int[, ] matrix)
 Console.Clear();
 Console.Write("Введите размер матрицы: ");
 int[] coord = Console.ReadLine().Split(" ").Select(s => int.Parse(s)).ToArray();
+//принимает строку, создает массив, где каждый элемент это строка.
+// мы берем и проходимся функцией Select по каждому элементу массива строк, 
+// переводим элемент в число и возвращаем массив обратно
 int[,] matrix = new int[coord[0], coord[1]];
 InputMatrix(matrix);
