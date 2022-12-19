@@ -23,7 +23,7 @@ void SwapFirstLastString(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (i < j)
+            if (i < j) // главную диагональ не трогаем
             {
                 int temp = matrix[i, j];
                 matrix[i, j] = matrix[j, i];
@@ -39,6 +39,8 @@ Console.Clear();
 Console.Write("Введите размер матрицы: ");
 int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
 while (coord[0] != coord[1])
+// пока кол-во строк не равно кол-ву столбцов, вы ошиблись, 
+// введите заново размер массива
 {
     Console.Write("Вы ошиблись!\nВведите размер матрицы: ");
     coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
