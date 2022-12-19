@@ -9,18 +9,21 @@ void InputMatrix(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = new Random().Next(1, 11); // [1, 10]
-            Console.Write($"{matrix[i, j]} \t");
+            Console.Write($"{matrix[i, j]} \t"); // вывод нашего массива
         }
-        Console.WriteLine();
+        Console.WriteLine();// переход на новую строка
     }
 }
 
-void SwapFirstLastString(int[,] matrix)
+void SwapFirstLastString(int[,] matrix)// процедура, которая будет все делать, передача двумерного массива
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
+    // проходимся по каждому значению столбца, 
+    //тк количество строк не меняется, меняются только столбцы
     {
-        int temp = matrix[0, j];
-        matrix[0, j] = matrix[matrix.GetLength(0) - 1, j];
+        int temp = matrix[0, j];//проходимся по каждому значению столбца, у первой строки и у последней
+        // заводим переменную темп, в не кладем массив, строка не меняется
+        matrix[0, j] = matrix[matrix.GetLength(0) - 1, j]; // 1 строка меняется с последней (- 1)
         matrix[matrix.GetLength(0) - 1, j] = temp;
     }
 
